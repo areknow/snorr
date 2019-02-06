@@ -1,7 +1,4 @@
-<ng-container [ngSwitch]="audioProvider.playing">
-  <img class="audio-control" src='/assets/imgs/pause.svg' *ngSwitchCase="true">
-  <img class="audio-control" src='/assets/imgs/play.svg' *ngSwitchCase="false">
-</ng-container>
+<audio-state-control></audio-state-control>
 tone {{ tone }}
 <br>
 <br>

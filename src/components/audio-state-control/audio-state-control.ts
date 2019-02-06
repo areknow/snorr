@@ -1,22 +1,22 @@
 import { Component } from '@angular/core';
+import { AudioProvider } from '../../providers/audio/audio';
 
-/**
- * Generated class for the AudioStateControlComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
 @Component({
   selector: 'audio-state-control',
   templateUrl: 'audio-state-control.html'
 })
 export class AudioStateControlComponent {
 
-  text: string;
+  /**
+   * Constructor
+   * @param audioProvider - service
+   */
+  constructor(public audioProvider: AudioProvider) { }
 
-  constructor() {
-    console.log('Hello AudioStateControlComponent Component');
-    this.text = 'Hello World';
+  /**
+   * toggleState - change play/pause state
+   */
+  toggleState(): void {
+    this.audioProvider.playing = !this.audioProvider.playing;
   }
-
 }

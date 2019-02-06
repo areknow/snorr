@@ -1,4 +1,4 @@
-<!-- Generated template for the AudioStateControlComponent component -->
-<div>
-  {{text}}
+<div [ngSwitch]="audioProvider.playing" (click)="toggleState()">
+  <img class="audio-control" src='/assets/imgs/pause.svg' *ngSwitchCase="true">
+  <img class="audio-control" src='/assets/imgs/play.svg' *ngSwitchCase="false">
 </div>

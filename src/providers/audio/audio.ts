@@ -5,8 +5,6 @@ export class AudioProvider {
 
   playing: boolean = true;
 
-  constructor() {
-    console.log('Hello AudioProvider Provider');
-  }
+  constructor() { }
 
 }

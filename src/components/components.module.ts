@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { AudioStateControlComponent } from './audio-state-control/audio-state-control';
 
@@ -5,7 +6,9 @@ import { AudioStateControlComponent } from './audio-state-control/audio-state-co
   declarations: [
     AudioStateControlComponent,
   ],
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   exports: [
     AudioStateControlComponent,
   ]

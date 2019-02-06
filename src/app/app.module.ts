@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { ComponentsModule } from '../components/components.module';
 import { HomePage } from '../pages/home/home';
 import { ToneSlide } from '../pages/home/slides/tone/tone';
 import { VolumeSlide } from '../pages/home/slides/volume/volume';
@@ -19,7 +20,8 @@ import { MyApp } from './app.component';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
