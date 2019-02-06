@@ -1,16 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { BrowserModule } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
-import { MyApp } from './app.component';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HomePage } from '../pages/home/home';
+import { ToneSlide } from '../pages/home/slides/tone/tone';
+import { VolumeSlide } from '../pages/home/slides/volume/volume';
+import { AudioProvider } from '../providers/audio/audio';
+import { MyApp } from './app.component';
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    VolumeSlide,
+    ToneSlide
   ],
   imports: [
     BrowserModule,
@@ -19,12 +24,15 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    VolumeSlide,
+    ToneSlide
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AudioProvider,
   ]
 })
 export class AppModule {}
