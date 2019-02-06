@@ -13,8 +13,6 @@ export class ToneSlide {
   constructor(
     public navCtrl: NavController,
     public audioProvider: AudioProvider
-  ) {
-
-  }
+  ) { }
 
 }

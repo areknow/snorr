@@ -9,8 +9,6 @@ export class VolumeSlide {
 
   volume: number = 50;
 
-  constructor(public navCtrl: NavController) {
-
-  }
+  constructor(public navCtrl: NavController) { }
 
 }
