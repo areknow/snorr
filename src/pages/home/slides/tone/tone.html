@@ -4,4 +4,9 @@ tone {{ tone }}
 <br>
 <br>
 <br>
-<input type="range" orient="vertical" [(ngModel)]="tone"/>
+<input #range 
+  type="range" 
+  orient="vertical" 
+  [(ngModel)]="tone" 
+  (input)="rangeShift(range.value)"
+/>

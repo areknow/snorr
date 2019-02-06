@@ -11,4 +11,11 @@ export class VolumeSlide {
 
   constructor(public navCtrl: NavController) { }
 
+  /**
+   * rangeShift - receive range change
+   * @param value: range value
+   */
+  rangeShift(value: number): void {
+    console.log(value);
+  }
 }

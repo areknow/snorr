@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { AudioProvider } from '../../../../providers/audio/audio';
 
 @Component({
   selector: 'tone-volume',
@@ -10,9 +9,13 @@ export class ToneSlide {
 
   tone: number = 80;
 
-  constructor(
-    public navCtrl: NavController,
-    public audioProvider: AudioProvider
-  ) { }
+  constructor(public navCtrl: NavController) { }
 
+  /**
+   * rangeShift - receive range change
+   * @param value: range value
+   */
+  rangeShift(value: number): void {
+    console.log(value);
+  }
 }

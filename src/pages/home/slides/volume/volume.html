@@ -4,4 +4,9 @@ volume {{ volume }}
 <br>
 <br>
 <br>
-<input type="range" orient="vertical" [(ngModel)]="volume"/>
+<input #range 
+  type="range" 
+  orient="vertical" 
+  [(ngModel)]="volume" 
+  (input)="rangeShift(range.value)"
+/>
